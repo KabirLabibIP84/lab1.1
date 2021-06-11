@@ -1,5 +1,5 @@
 go_binary {
-  name: "hello i am labib",
+  name: "hello ",
   pkg: ".",
   srcs: ["**/*.go"],
 }
