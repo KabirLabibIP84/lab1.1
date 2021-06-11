@@ -1,4 +1,4 @@
-module github.com/roman-mazur/design-practice-1-template
+module github.com/KabirLabibIP84/lab1.1
 
 go 1.15
 
