@@ -9,7 +9,7 @@ func TestHello(t *testing.T) {
 	}
 
 	helloName := hello("Valera")
-	if helloName != "Hello, Valera!" {
-		t.Error("hello(\"Valera\") failed, expected: Hello, Valera!, got: ", helloName)
+	if helloName != "Hello, i'm Labib!" {
+		t.Error("hello(\"Labib\") failed, expected: Hello, Labib!, got: ", helloName)
 	}
 }
