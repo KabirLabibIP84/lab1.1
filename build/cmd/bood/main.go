@@ -6,12 +6,11 @@ import (
 	"log"
 	"os"
 	"os/exec"
-
 	"github.com/google/blueprint"
 	"github.com/roman-mazur/bood"
-	"github.com/roman-mazur/bood/gomodule"
-	// TODO: Підставте свій власний пакет.
-	// "github.com/roman-mazur/design-practice-1-template/build/gomodule"
+
+	"github.com/KabirLabibIP84/lab1.1/tree/master/build/gomodule"
+	"github.com/KabirLabibIP84/lab1.1/blob/master/build/gomodule/zip_archive.go"
 )
 
 var (
@@ -21,8 +20,8 @@ var (
 
 func NewContext() *blueprint.Context {
 	ctx := bood.PrepareContext()
-	// TODO: Замініть імплементацію go_binary на власну.
-	ctx.RegisterModuleType("go_binary", gomodule.SimpleBinFactory)
+	ctx.RegisterModuleType("go_testedbinary", gomodule.SimpleBinFactory)
+	ctx.RegisterModuleType("zip_archive", zip_archive.SimpleZipArchiveFactory)
 	return ctx
 }
 
