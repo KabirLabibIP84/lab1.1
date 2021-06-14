@@ -1,10 +1,12 @@
 go_binary {
-  // Module (and output) name.
-  name: "bood",
+  name: "test_binary",
+  pkg: "./test_build",
+  srcs: ["**/*.go", "../go.mod"],
+  testPkg: "./...",
+  testSrcs: ["**/*_test.go"]
+}
 
-  // Go package to build.
-  pkg: "github.com/KabirLabibIP84/lab1.1/build/cmd/bood",
-
-  // Build inputs.
-  srcs: ["**/*.go", "../go.mod"]
+go_archive_bin {
+  name: "my_archive",
+  binary: "test_bin"
 }
