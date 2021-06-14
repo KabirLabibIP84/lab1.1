@@ -1,5 +1,12 @@
 go_binary {
-  name: "hello ",
-  pkg: ".",
-  srcs: ["**/*.go"],
+  name: "test_binary",
+  pkg: "./test_build",
+  srcs: ["**/*.go", "../go.mod"],
+  testPkg: "./...",
+  testSrcs: ["**/*_test.go"]
+}
+
+go_archive_bin {
+  name: "my_archive",
+  binary: "test_bin"
 }
